@@ -26,7 +26,7 @@
         class="text--secondary"
         style="text-decoration: none; font-size: 100%"
       >
-        {{ devfestInfo.name }}
+        {{ IWDInfo.name }}
       </router-link>
     </v-toolbar-title>
 
@@ -53,30 +53,29 @@
         rounded
         target="_blank"
         color="primary"
-        v-if="devfestInfo.registration.status==1"
-        :href="devfestInfo.registration.link"
+        v-if="IWDInfo.registration.status == 1"
+        :href="IWDInfo.registration.link"
         style="text-transform: none; font-size: 80%; font-weight: 500"
         >Register Now</v-btn
       >
     </div>
   </v-app-bar>
 </template>
-  
-  <script>
-import devfestJSON from "@/assets/data/devfests.json";
-import navbarJSON from "@/assets/data/navbar.json";
+
+<script>
+import IWDJSON from '@/assets/data/IWDs.json';
+import navbarJSON from '@/assets/data/navbar.json';
 export default {
   data: () => ({
     pages: navbarJSON,
-    devfestInfo: devfestJSON,
+    IWDInfo: IWDJSON,
   }),
   methods: {
     toggleDrawer() {
-      this.$store.commit("TOGGLE_DRAWER");
+      this.$store.commit('TOGGLE_DRAWER');
     },
   },
 };
 </script>
-  
-  <style>
-</style>
+
+<style></style>

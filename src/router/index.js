@@ -1,9 +1,9 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import communityJSON from '@/assets/data/community.json'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import HomeView from '../views/HomeView.vue';
+import communityJSON from '@/assets/data/community.json';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
@@ -11,66 +11,72 @@ const routes = [
     name: 'home',
     component: HomeView,
     meta: {
-      title: 'Home'
-    }
+      title: 'Home',
+    },
   },
   {
     path: '/speakers',
     name: 'speakers',
-    component: () => import(/* webpackChunkName: "speakers" */ '../views/SpeakersPage.vue'),
+    component: () =>
+      import(/* webpackChunkName: "speakers" */ '../views/SpeakersPage.vue'),
     meta: {
-      title: 'Speakers'
-    }
+      title: 'Speakers',
+    },
   },
   {
     path: '/schedule',
     name: 'schedule',
-    component: () => import(/* webpackChunkName: "schedule" */ '../views/SchedulePage.vue'),
+    component: () =>
+      import(/* webpackChunkName: "schedule" */ '../views/SchedulePage.vue'),
     meta: {
-      title: 'Schedule'
-    }
+      title: 'Schedule',
+    },
   },
   {
     path: '/team',
     name: 'team',
-    component: () => import(/* webpackChunkName: "schedule" */ '../views/TeamPage.vue'),
+    component: () =>
+      import(/* webpackChunkName: "schedule" */ '../views/TeamPage.vue'),
     meta: {
-      title: 'Team'
-    }
+      title: 'Team',
+    },
   },
   {
     path: '/faq',
     name: 'faq',
-    component: () => import(/* webpackChunkName: "faq" */ '../views/FAQPage.vue'),
+    component: () =>
+      import(/* webpackChunkName: "faq" */ '../views/FAQPage.vue'),
     meta: {
-      title: 'FAQ'
-    }
+      title: 'FAQ',
+    },
   },
   {
     path: '/coc',
     name: 'CodeofConduct',
-    component: () => import(/* webpackChunkName: "coc" */ '../views/CoCPage.vue'),
+    component: () =>
+      import(/* webpackChunkName: "coc" */ '../views/CoCPage.vue'),
     meta: {
-      title: 'Code of Conduct'
-    }
+      title: 'Code of Conduct',
+    },
   },
   {
     path: '/badge',
     name: 'badge',
-    component: () => import(/* webpackChunkName: "badge" */ '../views/BadgePage.vue'),
+    component: () =>
+      import(/* webpackChunkName: "badge" */ '../views/BadgePage.vue'),
     meta: {
-      title: 'Badge'
-    }
+      title: 'Badge',
+    },
   },
   {
     path: '*',
     name: 'redirect-route',
     component: HomeView,
     meta: {
-      title: 'Home'
-    }
-  }
-]
+      title: 'Home',
+    },
+  },
+];
 
 const router = new VueRouter({
   mode: 'history',
@@ -78,17 +84,18 @@ const router = new VueRouter({
   scrollBehavior() {
     return { x: 0, y: 0 };
   },
-  routes
-})
+  routes,
+});
 
-const DEFAULT_TITLE = 'DevFest 2023';
+const DEFAULT_TITLE = 'IWD 2024';
 
 router.afterEach((to) => {
   // Use next tick to handle router history correctly
   // see: https://github.com/vuejs/vue-router/issues/914#issuecomment-384477609
   Vue.nextTick(() => {
-    document.title = to.meta.title + " | " + communityJSON.community_name || DEFAULT_TITLE;
+    document.title =
+      to.meta.title + ' | ' + communityJSON.community_name || DEFAULT_TITLE;
   });
 });
 
-export default router
+export default router;

@@ -19,8 +19,8 @@
         rounded
         target="_blank"
         color="primary"
-        :href="devfestInfo.call_for_speakers.link"
-        v-if="devfestInfo.call_for_speakers.status==1"
+        :href="IWDInfo.call_for_speakers.link"
+        v-if="IWDInfo.call_for_speakers.status==1"
         style="text-transform: none; font-size: 80%; font-weight: 500; margin-top: 12px;"
         >Apply to become a speaker</v-btn> -->
         </v-col>
@@ -39,24 +39,25 @@
 </template>
 
 <script>
-import speakerCardVue from "@/components/speakers/speakerCard.vue";
-import speakersJSON from "@/assets/data/speakers.json";
+import speakerCardVue from '@/components/speakers/speakerCard.vue';
+import speakersJSON from '@/assets/data/speakers.json';
 
-import devfestJSON from "@/assets/data/devfests.json";
+import IWDJSON from '@/assets/data/IWDs.json';
 
 export default {
-  name: "SpeakersPages",
+  name: 'SpeakersPages',
   components: {
     speakerCardVue,
-    
   },
   data: () => ({
     speakersInfo: speakersJSON,
-    devfestInfo: devfestJSON,
+    IWDInfo: IWDJSON,
   }),
   computed: {
     sortedSpeakersInfo() {
-      return [...this.speakersInfo].sort((a, b) => a.name.localeCompare(b.name));
+      return [...this.speakersInfo].sort((a, b) =>
+        a.name.localeCompare(b.name)
+      );
     },
   },
 };

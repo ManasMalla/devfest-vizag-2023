@@ -21,19 +21,19 @@
                 <v-icon>mdi-chevron-up</v-icon>
               </v-btn>
             </v-fab-transition>
-            <h1 class="google-font mb-0">DevFest 2023</h1>
+            <h1 class="google-font mb-0">IWD 2024</h1>
           </v-card-text>
         </v-col>
       </v-row>
       <v-row justify="center" align="center" class="pb-5">
         <v-col md="11" sm="11" xl="11" lg="11" cols="12" class="">
           <a
-            href="https://2021.devfestindia.com"
+            href="https://2021.IWDindia.com"
             target="_blank"
             rel="noreferrer"
             class="grey--text text--darken-3 mr-4 google-font"
             style="text-decoration: none"
-            >DevFest 2023</a
+            >IWD 2024</a
           >
           <br class="hidden-md-and-up" />
 
@@ -88,7 +88,7 @@
 
 <script>
 export default {
-  name: "AppFooter",
+  name: 'AppFooter',
   methods: {
     toTop() {
       this.$vuetify.goTo(0);

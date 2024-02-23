@@ -5,13 +5,13 @@
       <v-row>
         <v-col md="12" lg="12" class="d-block d-sm-block d-md-none px-0">
           <p class="google-font gdg-heading mb-0 grey--text text--darken-4">
-            DevFest Badge
+            IWD Badge
           </p>
           <p class="my-0 mb-8 h1-subheading google-font">
-            Now that you are here, how about personalising your DevFest India
-            2023 profile? Upload an image and generate a personalised badge with
-            the DevFest India 2023 frame. Also share your image using
-            #DevFestIndia on different social platforms.
+            Now that you are here, how about personalising your IWD India 2024
+            profile? Upload an image and generate a personalised badge with the
+            IWD India 2024 frame. Also share your image using #IWDIndia on
+            different social platforms.
           </p>
         </v-col>
       </v-row>
@@ -25,13 +25,13 @@
         >
           <div class="d-none d-sm-none d-md-block mb-10">
             <p class="google-font gdg-h1 mb-0 grey--text text--darken-4">
-              DevFest Badge
+              IWD Badge
             </p>
             <p class="google-font" style="font-size: 18px">
-              Now that you are here, how about personalising your DevFest India
-              2023 profile? Upload an image and generate a personalised badge
-              with the DevFest India 2023 frame. Also share your image using
-              #DevFestIndia on different social platforms.
+              Now that you are here, how about personalising your IWD India 2024
+              profile? Upload an image and generate a personalised badge with
+              the IWD India 2024 frame. Also share your image using #IWDIndia on
+              different social platforms.
             </p>
           </div>
           <div class="input">
@@ -103,10 +103,7 @@
           sm="12"
           cols="12"
           class="text-center py-md-10 py-5 order-md-2 order-sm-1 order-1"
-          style="
-            background: #e8f1fb;
-            border-radius: 18px;
-          "
+          style="background: #e8f1fb; border-radius: 18px"
         >
           <canvas class=""></canvas>
           <br /><br />
@@ -126,22 +123,21 @@
   </v-main>
 </template>
 
-
 <script>
-import gdgImage from "@/assets/img/badge.png";
+import gdgImage from '@/assets/img/badge.png';
 export default {
-  name: "BadgeComponent",
+  name: 'BadgeComponent',
   data: () => ({
     downloadbtn: false,
     canvas: null,
-    shape: "original",
-    image: "",
-    shapeData: "original",
+    shape: 'original',
+    image: '',
+    shapeData: 'original',
     ctx: null,
     banner: null,
   }),
   created() {
-    document.title = "Badges | DevFest India 2023";
+    document.title = 'Badges | IWD India 2024';
   },
   methods: {
     upload(e) {
@@ -159,9 +155,9 @@ export default {
       }
     },
     uploadImage() {
-      document.querySelector("input.profile-input").click();
+      document.querySelector('input.profile-input').click();
       this.downloadbtn = true;
-      document.getElementById("download").style.visibility = "visible";
+      document.getElementById('download').style.visibility = 'visible';
     },
     changeShape(type) {
       this.shape = type;
@@ -170,7 +166,7 @@ export default {
     draw() {
       if (this.image) {
         switch (this.shape) {
-          case "original": {
+          case 'original': {
             this.canvas.width = this.image.width;
             this.canvas.height = this.image.height;
             this.ctx.drawImage(this.image, 0, 0);
@@ -201,7 +197,7 @@ export default {
       } else {
         this.ctx.canvas.width = 2500;
         this.ctx.canvas.height = 2500;
-        this.ctx.fillStyle = "#fff";
+        this.ctx.fillStyle = '#fff';
         this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
       }
       const height =
@@ -219,13 +215,13 @@ export default {
         this.canvas.width,
         height
       );
-      this.ctx.fillStyle = "#757575";
-      this.ctx.textAlign = "center";
-      this.ctx.textBaseline = "middle";
+      this.ctx.fillStyle = '#757575';
+      this.ctx.textAlign = 'center';
+      this.ctx.textBaseline = 'middle';
       this.ctx.font = `${fontSize}px Google Sans, sans-serif`;
       // ctx.fillText(category, canvas.width / 2, fontY)
-      if (this.shape === "circle") {
-        this.ctx.globalCompositeOperation = "destination-in";
+      if (this.shape === 'circle') {
+        this.ctx.globalCompositeOperation = 'destination-in';
         this.ctx.beginPath();
         this.ctx.arc(
           this.canvas.width / 2,
@@ -239,20 +235,20 @@ export default {
       }
     },
     download() {
-      const a = document.createElement("a");
-      const url = this.canvas.toDataURL("image/png;base64");
-      a.download = "#DevFestIndia_badge.png";
+      const a = document.createElement('a');
+      const url = this.canvas.toDataURL('image/png;base64');
+      a.download = '#IWDIndia_badge.png';
       a.href = url;
       a.click();
     },
   },
   mounted() {
-    this.canvas = document.querySelector("canvas");
-    this.ctx = this.canvas.getContext("2d");
-    this.image = "";
-    this.shape = "original";
+    this.canvas = document.querySelector('canvas');
+    this.ctx = this.canvas.getContext('2d');
+    this.image = '';
+    this.shape = 'original';
     this.downloadbtn = false;
-    document.getElementById("download").style.visibility = "hidden";
+    document.getElementById('download').style.visibility = 'hidden';
     this.banner = new Image();
     this.banner.src = gdgImage;
     // console.log(this.banner);
@@ -348,5 +344,3 @@ canvas {
   }
 }
 </style>
-
-  

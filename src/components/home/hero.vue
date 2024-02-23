@@ -19,30 +19,30 @@
           class="google-font gdg-h1 mb-4 grey--text text--darken-4"
           style="font-size: 300%; line-height: 40px"
         >
-          DevFest 2023<br />
+          IWD 2024<br />
           <span style="color: #4285f4; font-size: 28px">{{
             communityInfo.community_name
           }}</span>
         </p>
         <p class="google-font mt-3 mb-0" style="font-size: 19px">
-          <v-icon>mdi-calendar-month</v-icon> {{ devfestInfo.date }}
+          <v-icon>mdi-calendar-month</v-icon> {{ IWDInfo.date }}
         </p>
         <p class="google-font mt-0" style="font-size: 19px">
-          <v-icon>mdi-clock-time-eight-outline</v-icon> {{ devfestInfo.time }}
+          <v-icon>mdi-clock-time-eight-outline</v-icon> {{ IWDInfo.time }}
         </p>
         <p
           class="google-font text--secondary"
           style="font-weight: 500; font-size: 18px"
         >
-          {{ devfestInfo.desc.short }}
+          {{ IWDInfo.desc.short }}
         </p>
         <v-btn
           dark
           depressed
           rounded
           color="#4285F4"
-          :href="devfestInfo.registration.link"
-          v-if="devfestInfo.registration.status == 1"
+          :href="IWDInfo.registration.link"
+          v-if="IWDInfo.registration.status == 1"
           target="_blank"
           >Register Now
         </v-btn>
@@ -54,7 +54,7 @@
               md="4"
               cols="4"
               sm="2"
-              v-for="(item, index) in devfestInfo.stats.slice(0, 6)"
+              v-for="(item, index) in IWDInfo.stats.slice(0, 6)"
               :key="index"
             >
               <div
@@ -79,14 +79,14 @@
 </template>
 
 <script>
-import devfestJSON from "@/assets/data/devfests.json";
-import communityJSON from "@/assets/data/community.json";
+import IWDJSON from '@/assets/data/IWDs.json';
+import communityJSON from '@/assets/data/community.json';
 export default {
-  name: "HeroComponent",
+  name: 'HeroComponent',
   data: () => ({
     loading: true,
     communityInfo: communityJSON,
-    devfestInfo: devfestJSON,
+    IWDInfo: IWDJSON,
   }),
   methods: {},
 };

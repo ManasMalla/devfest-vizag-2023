@@ -1,82 +1,83 @@
 @font-face {
-    font-family: "google-sans";
-    src: url(assets/fonts/DMSans-VariableFont_opsz\,wght.ttf) format("truetype-variations");
-    font-display: swap;
-  }
-  
-  .google-font{
-    font-family: "google-sans", Helvetica, Arial, Sans-Serif
-  }
-  
-  /* .v-main__wrap, .v-toolbar {
+  font-family: 'google-sans';
+  src: url(assets/fonts/DMSans-VariableFont_opsz\wght.ttf)
+    format('truetype-variations');
+  font-display: swap;
+}
+
+.google-font {
+  font-family: 'google-sans', Helvetica, Arial, Sans-Serif;
+}
+
+/* .v-main__wrap, .v-toolbar {
     background: white !important;
   } */
-  
-  .primary-text {
-    color: #4884f3;
+
+.primary-text {
+  color: #4884f3;
+}
+.multiline {
+  white-space: pre-line;
+}
+
+.disabled {
+  pointer-events: none;
+  color: red !important;
+  font-size: 15px;
+}
+
+/* Large Scale Display */
+@media screen and (min-width: 600px) {
+  .gdg-heading {
+    font-family: 'google-sans';
+    font-size: 55px;
+    font-weight: 600;
   }
-  .multiline{
-    white-space: pre-line;
+  .gdg-h1 {
+    font-family: 'google-sans';
+    font-size: 35px;
+    font-weight: 600;
   }
-  
-  .disabled {
-    pointer-events: none;
-    color: red !important;
-    font-size: 15px
+  .gdg-subheading {
+    font-family: 'google-sans';
+    font-size: 30px;
+    font-weight: 300;
   }
-  
-  /* Large Scale Display */
-  @media screen and (min-width: 600px) {
-    .gdg-heading {
-      font-family:'google-sans';
-      font-size: 55px;
-      font-weight: 600;
-    }
-    .gdg-h1 {
-        font-family:'google-sans';
-        font-size: 35px;
-        font-weight: 600;
-    }
-    .gdg-subheading {
-      font-family:'google-sans';
-      font-size: 30px;
-      font-weight: 300;
-    }
-    .devfest-name{
-      font-family:'google-sans';
-      font-size: 50px;
-      font-weight: 600;
-    }
-    .devfest-card{
-      margin-right: 40%;
-    }
+  .IWD-name {
+    font-family: 'google-sans';
+    font-size: 50px;
+    font-weight: 600;
   }
-  
-  /* Small Scale Display */
-  @media only screen and (max-width: 600px) {
-      .gdg-heading {
-          font-family:'google-sans';
-          font-size:34px;
-          font-weight: 600;
-      }
-      .gdg-h1 {
-        font-family:'google-sans';
-        font-size: 30px;
-        font-weight: 600;
-    }
-      .gdg-subheading {
-          font-family:'google-sans';
-          font-size: 20px;
-          font-weight: 300;
-      }
-  
-      .devfest-name{
-        font-family:'google-sans';
-        font-size: 30px;
-        font-weight: 600;
-      }
-  
-      .devfest-card{
-        margin-right: 50%;
-      }
+  .IWD-card {
+    margin-right: 40%;
   }
+}
+
+/* Small Scale Display */
+@media only screen and (max-width: 600px) {
+  .gdg-heading {
+    font-family: 'google-sans';
+    font-size: 34px;
+    font-weight: 600;
+  }
+  .gdg-h1 {
+    font-family: 'google-sans';
+    font-size: 30px;
+    font-weight: 600;
+  }
+  .gdg-subheading {
+    font-family: 'google-sans';
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  .IWD-name {
+    font-family: 'google-sans';
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .IWD-card {
+    margin-right: 50%;
+  }
+}

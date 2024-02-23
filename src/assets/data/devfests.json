@@ -1,15 +1,12 @@
 {
-  "name":"DevFest Vizag",
-  "cover_image":"cover.png",
+  "name": "IWD",
+  "cover_image": "cover.png",
   "desc": {
     "short": "An annual event hosted by the Google Developers Group across the world to bring the technology closer to the developers. It is an all day developer conference where we aim to focus on multiple technologies through lightning talks, sessions, workshops, etc.",
     "long": "An annual event hosted by the Google Developers Group across the world to bring the technology closer to the developers. It is an all day developer conference where we aim to focus on multiple technologies through lightning talks, sessions, workshops, etc.An annual event hosted by the Google Developers Group across the world to bring the technology closer to the developers. It is an all day developer conference where we aim to focus on multiple technologies through lightning talks, sessions, workshops, etc."
   },
-  "hashtags": [
-    "DevFest2023",
-    "CommunityName"
-  ],
-  "date": "December 02, 2023",
+  "hashtags": ["IWD2024", "CommunityName"],
+  "date": "December 02, 2024",
   "time": "10 am IST",
   "venue": {
     "name": "Gandhi Institute of Technology and Management",
@@ -19,13 +16,13 @@
     "map": ""
   },
   "registration": {
-    "link":"https://forms.gle/3SwoCqruyLudHBxG8",
+    "link": "https://forms.gle/3SwoCqruyLudHBxG8",
     "status": "1"
   },
   "call_for_speakers": {
     "status": "1",
-    "link": "https://sessionize.com/devfest-vizag-2023/",
-    "lastdate": "2023-12-20"
+    "link": "https://sessionize.com/IWD-vizag-2024/",
+    "lastdate": "2024-12-20"
   },
   "stats": [
     {

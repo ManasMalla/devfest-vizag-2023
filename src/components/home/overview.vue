@@ -24,7 +24,7 @@
               md="4"
               sm="4"
               cols="12"
-              v-for="(item, index) in devfestInfo.what_to_expect"
+              v-for="(item, index) in IWDInfo.what_to_expect"
               :key="index"
             >
               <div
@@ -45,11 +45,11 @@
 </template>
 
 <script>
-import devfestJSON from "@/assets/data/devfests.json";
+import IWDJSON from '@/assets/data/IWDs.json';
 export default {
-  name: "OverviewComponent",
+  name: 'OverviewComponent',
   data: () => ({
-    devfestInfo: devfestJSON,
+    IWDInfo: IWDJSON,
   }),
 };
 </script>
